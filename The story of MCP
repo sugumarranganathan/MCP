@@ -1,0 +1,91 @@
+🔌 The story of MCP
+
+MCP was created by Anthropic, the AI company behind Claude.
+
+6
+🇺🇸 Who created it?
+
+Anthropic — an American AI company based in San Francisco, California, USA.
+
+MCP was introduced publicly by Anthropic in November 2024.
+
+The idea was simple:
+
+“AI models need an easy, standard way to connect to external tools and information.”
+
+Before MCP, developers often had to build different custom integrations for different AI applications and tools.
+
+🧩 The problem before MCP
+
+Imagine you have:
+
+AI
+ ↓
+Database
+
+Then you want:
+
+AI → GitHub
+AI → Google Drive
+AI → Database
+AI → Slack
+AI → Weather API
+
+Developers could create separate connections for each one.
+
+That becomes messy.
+
+========
+
+💡 Then MCP came
+
+Anthropic proposed a standard protocol for connecting AI applications to external tools and data.
+
+Think about USB.
+
+Before USB, different devices could have different connectors.
+
+USB gave computers a common connection standard.
+
+MCP is similar in concept:
+
+MCP = a common standard for AI ↔ tools/data communication.
+
+==========
+
+🚗 Your EV project example
+
+Suppose your EV forecasting agent needs:
+
+EV charging data
+Weather information
+Database records
+Forecast results
+
+Without MCP:
+
+AI Agent
+ ├── Custom EV API code
+ ├── Custom Weather API code
+ ├── Custom Database code
+ └── Custom File code
+
+With MCP:
+
+             AI Agent
+                ↓
+               MCP
+                ↓
+       ┌────────┼────────┐
+       ↓        ↓        ↓
+      EV API  Weather  Database
+
+The important point is that MCP is a protocol, not another AI model.
+
+=======
+
+“MCP was introduced by Anthropic, an AI company from the United States, in 2024. The problem was that AI applications needed to connect 
+to many different tools and data sources, and developers were creating separate custom integrations. Anthropic introduced Model Context Protocol 
+as a common standard for AI applications to communicate with external tools and data. So I can think of MCP like a universal connector for AI.”
+
+=======
