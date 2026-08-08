@@ -67,3 +67,12 @@ MCP is a standard way for an AI to communicate with external tools and data.
 
 =======
 
+| Technology        | Simple meaning      | What it does                                             |
+| ----------------- | ------------------- | -------------------------------------------------------- |
+| 🧠 **Groq / LLM** | Brain               | Thinks and generates decisions                           |
+| 🧰 **LangChain**  | Toolbox             | Gives the AI tools, prompts, memory, model connections   |
+| 🗺️ **LangGraph** | Manager             | Controls the flow between agents                         |
+| 🔌 **MCP**        | Universal connector | Lets AI connect to external tools/data in a standard way |
+
+
+========
