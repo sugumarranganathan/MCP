@@ -1,0 +1,69 @@
+🤖 What is MCP?
+
+MCP = Model Context Protocol
+
+Think of an AI assistant as a smart student.
+
+The AI knows many things, but sometimes it needs to use outside tools to do a job.
+
+For example:
+
+📁 Read a file
+🔍 Search information
+🗄️ Get data from a database
+📧 Send an email
+📊 Read Excel data
+🌐 Access a website
+
+MCP is like a common plug/socket that lets the AI connect to these tools.
+
+🔌 Simple example
+
+Imagine you have a robot 🤖.
+
+The robot wants to:
+
+"Read my Excel file and calculate the total."
+
+The robot itself may not directly know how to open Excel.
+
+MCP acts like a bridge:
+
+AI Robot 🤖 → MCP → Excel Tool 📊 → Result → AI Robot
+
+The AI says:
+
+"Please give me the Excel data."
+
+MCP connects the AI to the correct tool and brings the result back.
+
+🏫 School example
+
+Imagine a student named Ravi.
+
+Ravi has different teachers:
+
+| Teacher             | Helps with        |
+| ------------------- | ----------------- |
+| 📚 Maths teacher    | Calculations      |
+| 🔬 Science teacher  | Science questions |
+| 💻 Computer teacher | Computer work     |
+| 📖 English teacher  | English           |
+
+
+Ravi doesn't need to learn everything from every teacher.
+
+He simply asks the right teacher.
+
+Similarly:
+
+AI = Ravi
+MCP = Communication system
+Tools = Teachers
+
+⭐ One-line definition
+
+MCP is a standard way for an AI to communicate with external tools and data.
+
+=======
+
