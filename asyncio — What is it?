@@ -1,0 +1,102 @@
+asyncio — What is it?
+
+asyncio is a built-in Python library used to write asynchronous programs.
+
+In simple words:
+
+asyncio helps Python do other work while it is waiting for a slow operation to finish.
+
+👦 Simple example
+
+Imagine you have 3 tasks:
+
+Task 1 → Call API ⏳
+Task 2 → Read database ⏳
+Task 3 → Read file ⏳
+
+With normal synchronous Python:
+
+API → WAIT → finish
+             ↓
+Database → WAIT → finish
+                   ↓
+File → WAIT → finish
+
+With asyncio:
+
+API ────────────────→ ✅
+Database ──────────→ ✅
+File ───────────────→ ✅
+
+Python can switch between tasks while they are waiting.
+
+========
+
+🐍 Basic Python example
+import asyncio
+
+async def task():
+    print("Task started")
+    await asyncio.sleep(2)
+    print("Task finished")
+
+asyncio.run(task())
+
+Here:
+
+async def → defines an asynchronous function
+await → waits for an async operation without blocking the event loop
+asyncio.run() → starts and runs the asynchronous program
+
+========
+
+Multiple tasks
+import asyncio
+
+async def task1():
+    await asyncio.sleep(2)
+    print("Task 1 finished")
+
+async def task2():
+    await asyncio.sleep(1)
+    print("Task 2 finished")
+
+async def main():
+    await asyncio.gather(task1(), task2())
+
+asyncio.run(main())
+
+Instead of waiting 2 seconds + 1 second sequentially, the two waiting operations can overlap, so this takes roughly 2 seconds rather than 3.
+
+=======
+
+🔌 In MCP
+
+This is where it becomes useful for what you were asking about:
+
+AI Application
+      │
+      ↓
+   MCP Client
+      │
+      ↓
+   MCP Server
+      │
+      ├── Database ⏳
+      ├── API ⏳
+      └── File ⏳
+
+Python's asyncio can allow the MCP application to handle I/O operations without blocking the event loop while those operations are waiting.
+
+=========
+
+| Term          | Meaning                                                                     |
+| ------------- | --------------------------------------------------------------------------- |
+| **Async**     | A programming approach where waiting doesn't have to block other async work |
+| **`async`**   | Python keyword used to define an async function                             |
+| **`await`**   | Wait for an async result while yielding control                             |
+| **`asyncio`** | Python library/framework for managing asynchronous operations               |
+| **MCP**       | Protocol that can use async programming for tool/data communication         |
+
+
+===========
