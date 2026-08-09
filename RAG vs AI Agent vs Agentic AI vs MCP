@@ -1,0 +1,65 @@
+|                           | 📚 RAG               | 🤖 AI Agent         | 🧠 Agentic AI                 | 🔌 MCP                     |
+| ------------------------- | -------------------- | ------------------- | ----------------------------- | -------------------------- |
+| **What is it?**           | Knowledge technique  | AI worker           | Autonomous AI system          | Connection standard        |
+| **Main job**              | Find information     | Perform a task      | Achieve a goal                | Connect AI to tools/data   |
+| **Can make decisions?**   | Limited              | Yes, to some extent | **Yes, autonomously**         | No                         |
+| **Can use tools?**        | Not necessarily      | **Yes**             | **Yes, multiple tools**       | Provides access to tools   |
+| **Uses external data?**   | **Yes**              | Sometimes           | Sometimes                     | **Can expose data/tools**  |
+| **Plans multiple steps?** | No                   | Sometimes           | **Yes**                       | No                         |
+| **Example**               | Search PDFs → answer | Analyze CSV         | Complete forecasting workflow | Connect AI to database/API |
+| **Think of it as**        | 📖 Knowledge         | 👨‍🔧 Worker        | 👨‍💼 Manager/team            | 🔌 Connector               |
+
+
+==============
+
+Very simple example
+
+Suppose you build a Customer Support AI:
+
+RAG
+
+"Search the company's FAQ/PDF and answer the customer's question."
+
+AI Agent
+
+"Check the customer's order and give the delivery status."
+
+Agentic AI
+
+"Handle the customer's complaint completely: understand → check order → investigate → decide → take action → verify → respond."
+
+MCP
+
+"Provide a standard connection so the AI can access the order database, CRM, files, or other tools."
+
+=========
+
+
+The relationship
+
+
+                    AGENTIC AI
+                        │
+             ┌──────────┴──────────┐
+             ↓                     ↓
+         AI AGENTS              Planning
+             │
+       ┌─────┴─────┐
+       ↓           ↓
+      RAG         MCP
+   Knowledge    Tool/Data
+   retrieval    connection
+
+===========
+
+“RAG gives AI the right knowledge, an AI Agent performs tasks, Agentic AI autonomously plans and completes complex goals,
+and MCP provides a standardized connection between AI and external tools or data.”
+
+============
+
+RAG → could provide forecasting documentation/knowledge
+AI Agents → Data Agent, EDA Agent, Model Selection Agent, Forecasting Agent, etc.
+Agentic AI → coordinates those agents to complete the forecasting goal autonomously
+MCP → could connect the system to external databases, files, APIs, or business tools.
+
+============
