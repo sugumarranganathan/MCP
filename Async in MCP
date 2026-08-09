@@ -1,0 +1,70 @@
+Async in MCP
+
+In MCP (Model Context Protocol), async means the AI application can communicate with an MCP server without blocking while it waits for the server/tool response.
+
+Think of MCP as:
+
+AI Application
+      │
+      │ MCP request
+      ↓
+  MCP Server
+      │
+      ↓
+    Tool
+      │
+      │ takes time...
+      ↓
+   Result
+      │
+      ↓
+AI Application
+
+With async, while the MCP tool is waiting for something like a database or API:
+
+AI Agent
+   │
+   ├── MCP → Database ⏳
+   │
+   ├── Continue other work
+   │
+   └── Receive database result ✅
+👦 Simple example
+
+Suppose your AI asks an MCP server:
+
+"Get today's sales from the database."
+
+The database may take 2 seconds.
+
+Synchronous:
+
+AI → MCP → Database
+             ⏳
+             ⏳
+             ✅
+AI continues
+
+Async:
+
+AI → MCP → Database
+             ⏳
+AI can handle other async work
+             ↓
+             ✅
+Database result arrives
+🧠 Important distinction
+
+MCP itself is not "an async AI."
+
+MCP is a protocol for connecting AI applications with tools and data.
+
+==========
+
+Async is a programming/concurrency mechanism that can be used when implementing MCP clients/servers and tool calls.
+
+========
+
+
+
+“Async in MCP means the AI application can make or wait for MCP tool operations without blocking the entire application, so other work can continue while an external tool, API, or database is responding.”
