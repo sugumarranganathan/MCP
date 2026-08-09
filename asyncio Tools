@@ -1,0 +1,38 @@
+Python asyncio tools/functions used in asynchronous programming, there are several important ones. 
+For MCP and AI Agents, these are the most useful ones:
+
+Important asyncio Tools
+-----------------------
+
+| #  | Tool / Function          | Main Use                        | Simple Meaning                                         |
+| -- | ------------------------ | ------------------------------- | ------------------------------------------------------ |
+| 1  | `async def`              | Create an asynchronous function | Create a function that can work asynchronously         |
+| 2  | `await`                  | Wait for an async operation     | "Wait for this task before continuing"                 |
+| 3  | `asyncio.run()`          | Run an async program            | Starts and runs the async event loop                   |
+| 4  | `asyncio.sleep()`        | Pause an async task             | Wait without blocking other tasks                      |
+| 5  | `asyncio.gather()`       | Run multiple tasks concurrently | Run several async tasks together                       |
+| 6  | `asyncio.create_task()`  | Schedule a background task      | Start a task and continue working                      |
+| 7  | `asyncio.wait()`         | Wait for multiple tasks         | Wait for tasks based on conditions                     |
+| 8  | `asyncio.wait_for()`     | Set a timeout                   | Stop waiting if a task takes too long                  |
+| 9  | `asyncio.timeout()`      | Set a time limit                | Give an async operation a maximum time                 |
+| 10 | `asyncio.as_completed()` | Get results as tasks finish     | Process whichever task finishes first                  |
+| 11 | `asyncio.Queue`          | Communicate between async tasks | One task puts data, another takes it                   |
+| 12 | `asyncio.Lock`           | Protect shared resources        | Prevent multiple tasks from changing something at once |
+| 13 | `asyncio.Event`          | Signal between tasks            | Tell another task that something happened              |
+| 14 | `asyncio.Semaphore`      | Limit concurrent tasks          | Allow only a certain number of tasks at once           |
+
+
+============
+
+| Priority       | Tool                    | Why important for you                |
+| --------       | ----------------------  | ------------------------------------- |
+| ⭐⭐⭐⭐⭐    | `async def`             | Foundation of async Python            |
+| ⭐⭐⭐⭐⭐    | `await`                 | Used constantly in async code         |
+| ⭐⭐⭐⭐⭐    | `asyncio.gather()`      | Important for concurrent tool calls   |
+| ⭐⭐⭐⭐⭐    | `asyncio.create_task()` | Important for background tasks        |
+| ⭐⭐⭐⭐     | `asyncio.sleep()`       | Easy way to understand async behavior |
+| ⭐⭐⭐⭐     | `asyncio.wait_for()`    | Very useful for API/tool timeouts     |
+
+=========
+
+
