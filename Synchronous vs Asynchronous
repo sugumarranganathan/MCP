@@ -1,0 +1,74 @@
+| Feature               | 🔵 Synchronous                                                  | 🟢 Asynchronous                                                        |
+| --------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **Meaning**           | Wait for one task to finish before starting/continuing the next | Start a task and continue other work while waiting                     |
+| **Simple idea**       | **Wait → Finish → Continue**                                    | **Start → Continue → Get result later**                                |
+| **Execution**         | Sequential                                                      | Can handle multiple waiting tasks efficiently                          |
+| **Blocking**          | Usually blocks while waiting                                    | Avoids blocking during I/O waits                                       |
+| **Example**           | Call API → wait → get response → next task                      | Call API → do other work → response arrives                            |
+| **Real-life example** | 🏦 Bank queue: wait for your turn                               | 🍕 Order food: order and do something else while it is prepared        |
+| **Python**            | `result = get_data()`                                           | `result = await get_data()`                                            |
+| **AI Agent**          | Agent waits for each tool response                              | Agent can manage other async operations while waiting                  |
+| **MCP**               | MCP request waits for tool result                               | MCP client/server can use async operations for non-blocking tool calls |
+
+
+===========
+
+🏦 Real-life example
+
+Synchronous:
+
+Task 1: Make tea ☕
+       ↓
+WAIT until tea is ready
+       ↓
+Task 2: Make breakfast 🍳
+       ↓
+WAIT
+       ↓
+Task 3: Eat
+
+==============
+
+Asynchronous:
+
+Task 1: Start making tea ☕
+       ↓
+Task 2: Start breakfast 🍳
+       ↓
+Do other work 💻
+       ↓
+Tea ready ✅
+       ↓
+Breakfast ready ✅
+
+=============
+
+🐍 Python example
+
+Synchronous:
+
+result1 = get_data_from_api()
+result2 = get_data_from_database()
+
+print(result1)
+print(result2)
+
+The program waits for the API call before moving to the database call.
+
+Asynchronous:
+
+result1 = await get_data_from_api()
+result2 = await get_data_from_database()
+
+await lets the async runtime suspend that operation while it is waiting, so other async work can run.
+
+============
+
+Synchronous means “wait until the current task finishes.”
+
+Asynchronous means “don't block while waiting; allow other work to continue.”
+
+MCP can use asynchronous communication so AI applications can interact with tools, APIs, or databases without unnecessarily blocking while waiting for their responses.
+
+
+=============
